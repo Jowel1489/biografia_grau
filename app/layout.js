@@ -1,14 +1,18 @@
 import "./globals.css";
+import Header from "./components/Header";
 
 export const metadata = {
-  title: "Miguel Grau - El Caballero de los Mares",
-  description: "Biografía del Gran Almirante Miguel Grau Seminario, héroe nacional del Perú.",
+  title: "Grandes Héroes de la Libertad",
+  description: "Biografías de los forjadores de la libertad en América: Miguel Grau y Simón Bolívar.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
