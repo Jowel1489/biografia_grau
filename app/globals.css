@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --navy: #001f3f;
+  --gold: #D4AF37;
+  --off-white: #F8F9FA;
+  --text: #333333;
+  --light-text: #666666;
+  --accent: #B8860B;
+  
+  --background: var(--off-white);
+  --foreground: var(--text);
+  
+  --header-font: 'Playfair Display', serif;
+  --body-font: 'Inter', sans-serif;
+  
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--body-font);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--header-font);
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.navy-bg {
+  background-color: var(--navy);
+  color: var(--off-white);
+}
+
+.navy-bg h2, .navy-bg h3 {
+  color: var(--gold);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
